@@ -1,7 +1,7 @@
 # Garage-Door
 Raspberry Pi based password protected Garage door mobile app 
 
-This is a PHP script (index.php) that initiates a python script (gpiotoggle.py) to toggle three GPIO ports that are attached to a relay board. the intent is to toggle the garage door opener and two garage lights. The mobile app is password potected by a password you specify in the PHP script.
+This is a PHP/jquery script that initiates a python script to toggle three GPIO ports that are attached to a relay board. The intent is to toggle the garage door opener and two garage lights. The mobile app is password potected by a password you specify in the PHP script. a cookie saves a hashed copy of the passowrd so you only have to  authenticate once. Garage door status is also displayed via a magnetic switch on the door. 
 
 Setup a Raspberry Pi
 
