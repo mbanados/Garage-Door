@@ -43,6 +43,9 @@ $thepass    =    "cars";
 $password_hash = md5($thepass.This_is_a_fake_salt);
 $notlogged    =    "Password Required"; 
 $errormsg    =    "The password is incorrect.";   
+//$loc_action    =    $_SERVER['SCRIPT_NAME']; //this page
+//$loc_succ    =    $_SERVER['SCRIPT_NAME']; // The dock to go to on success (don't go to another page, that would be bad.
+//$loc_error    =    $PHP_SELF;    // The doc to go to on bad login. You can leave $PHP_SELF in most cases
 $but_log    =    "Login";    // Text on the submit button
 
 
@@ -110,17 +113,35 @@ if (isset($_POST['Pin22']))
 {
 exec("sudo python /home/pi/gpiotoggle.py 22");
 }
-//End define variables for GPIO pins.
+
+//see if the  door is open or closed via mag switch on GPIO 4
+$state = exec("sudo python /home/pi/gpiostatus.py 4");
+if  ($state == "1")
+{
+$state = "CLOSED" ;
+$color = "red";
+}
+if ($state == "0" )
+{
+$state = "OPEN";
+$color = "green";
+}
+
 ?>
 
 <!--display my form -->
 <div data-role="content">
 
 <div style="text-align: center;">
-
-//This is where I want to put open or closed status I did have a streaming video of the door here.
-//<img src="http://trolley:8081/">
-
+<div style="color:
+<?php print $color; ?>
+">
+<h1>
+<b>
+<?php print $state; ?>
+</b>
+</h1>
+</div>
 
 
 <form target=_self method="POST">
