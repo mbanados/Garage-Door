@@ -56,7 +56,7 @@ $logged        =    $_COOKIE['logged'];
 $mod        =    $_POST['mod'];
 // If there is no cookie and the user is not logging in, output the login form
 if($logged != $password_hash&& $mod != "login") {
-  
+
   echo '
 
 <div style="text-align: center;">
@@ -84,7 +84,7 @@ elseif($logged != $password_hash&& $mod == "login") {
     if($pass == $thepass) {
         // if the pass is correct, set the cookie and go to this page or do stuff
         //setcookie("logged", "1");
-        setcookie("logged", $password_hash);
+        setcookie("logged", $password_hash, time()+60*60*24*365, '/');
 	//sleep(3);
 	//header("Location: ".$PHP_SELF);
   	header("Refresh: 1; url=".$PHP_SELF);
