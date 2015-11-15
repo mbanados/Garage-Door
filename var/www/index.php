@@ -85,8 +85,9 @@ elseif($logged != $password_hash&& $mod == "login") {
         // if the pass is correct, set the cookie and go to this page or do stuff
         //setcookie("logged", "1");
         setcookie("logged", $password_hash);
-	header("Location: ".$PHP_SELF);
-  
+	//sleep(3);
+	//header("Location: ".$PHP_SELF);
+  	header("Refresh: 1; url=".$PHP_SELF);
 
 } else {
         // On bad login reload
