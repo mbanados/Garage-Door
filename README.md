@@ -24,7 +24,8 @@ Modify the execute permissions for the files:
 
 	sudo chmod a+x /home/pi/gpiostatus.py
 	sudo chmod a+x /home/pi/gpiotoggle.py
-
+	sudo chmod a+x /home/pi/wifi-monitor.sh
+	
 
 Edit the password in index.php (currently set to "cars")
 
