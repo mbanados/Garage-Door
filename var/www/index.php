@@ -105,6 +105,8 @@ elseif($logged != $password_hash&& $mod == "login") {
 if (isset($_POST['Pin18']))
 {
 exec("sudo python /home/pi/gpiotoggle.py 18");
+// it takes about 12 seconds to open and close the garage door
+sleep (12);
 }
 if (isset($_POST['Pin27']))
 {
@@ -115,8 +117,8 @@ if (isset($_POST['Pin22']))
 exec("sudo python /home/pi/gpiotoggle.py 22");
 }
 
-//see if the  door is open or closed via mag switch on GPIO 4
-$state = exec("sudo python /home/pi/gpiostatus.py 4");
+//see if the  door is open or closed via mag switch on GPIO 20
+$state = exec("sudo python /home/pi/gpiostatus.py 20");
 if  ($state == "1")
 {
 $state = "CLOSED" ;
