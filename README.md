@@ -6,12 +6,16 @@ This is a PHP/jquery script that initiates a python script to toggle three GPIO 
 Setup a Raspberry Pi
 
 Install Apache as follows:
-	sudo apt-get install apache2 -y
+
+	sudo apt-get install apache2 -y 
     
-Give Apache the ability to execute the scripts (Not the best method!):
-	sudo visudu
+Give Apache the ability to execute the scripts:
+
+	sudo visudu 
+	
 Add the following line of text:
-	www-data ALL=(ALL) NOPASSWD: ALL
+
+	www-data ALL=(ALL) NOPASSWD: ALL 
                 
 Drop these scripts in their associated directories (/var/www and /home/pi)
 
@@ -25,10 +29,6 @@ connect a magnetic switch to GPIO 20 as follows:
 	RPI 3.3 VOLT-------10K Ohm-------Switch Common                                            
 	RPI GPIO 20 -------1K Ohm--------Switch Common (two wires come to common)  
 	RPI Ground-----------------------Switch N.O.
-
-
-Browse from your mobile phone to your device.
-
 
 
 Browse from your mobile phone to your device.
