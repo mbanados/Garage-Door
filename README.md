@@ -19,7 +19,8 @@ Edit the password in index.php (currently set to "cars")
 
 connect your relay board (Sainsmart or otherwise) to GPIO 18, 27 and 22 or change what you need.
 
-connect a magnetic switch to GPIO 4 as folows
+connect a magnetic switch to GPIO 20 as folows:
+(I used to use GPIO 4 but this is reserved if you use a temperature sensor)
 	3.3 volts from RPI to 10K Ohm resistor
 	10K home resistor to common on switch and also forked to 1K Ohm resistor
 	1K Ohm resistor to GPIO4
