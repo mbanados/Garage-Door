@@ -39,7 +39,7 @@ Modify the execute permissions for the files:
 
 Edit the password in index.php (currently set to "cars")
 
-connect your relay board (Sainsmart or otherwise) to GPIO 18, 27 and 22 or change what you need.
+connect your relay board (Sainsmart or otherwise) to GPIO 18 (door) , 27 (inside light)  and 22 (outside light)  or change what you need.
 
 
 connect a magnetic switch to GPIO 20 as follows: 
