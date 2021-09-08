@@ -19,6 +19,13 @@ Add the following line of text:
                 
 Drop these scripts in their associated directories (/var/www and /home/pi)
 
+
+Modify the execute permissions for the files:
+
+	sudo chmod a+x /home/pi/gpiostatus.sh
+	sudo chmod a+x /home/pi/gpiotoggle.sh
+
+
 Edit the password in index.php (currently set to "cars")
 
 connect your relay board (Sainsmart or otherwise) to GPIO 18, 27 and 22 or change what you need.
