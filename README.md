@@ -20,6 +20,16 @@ Add the following line of text:
 Drop these scripts in their associated directories (/var/www and /home/pi)
 
 
+
+Add The netwrok monitor script to run at startup
+
+	sudo nano /etc/rc.local
+	
+Add this to the end of rc.local
+
+	#This is to monitor and restart wireless as needed
+	/bin/sh /network-monitor.sh &
+
 Modify the execute permissions for the files:
 
 	sudo chmod a+x /home/pi/gpiostatus.py
